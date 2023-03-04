@@ -1,0 +1,44 @@
+﻿body {
+   
+}
+.baground-input {
+    background: #E7E7E7;
+    width: 500px;
+    height: 230px;
+    border-radius: 20px
+}
+.login {
+    text-align: -webkit-center;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+.CenterItems {
+    padding-top: 50px
+}
+
+.input {
+    height: 25px;
+    width: 200px;
+    margin: 10px;
+    outline: none;
+    border: solid 0.3px #c5c5c5;
+    background: #fff;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.buttonSigin {
+    transition: all 0.3s;
+    width: 100px;
+    background: #fff;
+    height: 30px;
+    margin-top: 10px;
+    border: solid 0.3px #c5c5c5;
+    border-radius: 5px
+}
+.buttonSigin:hover {
+    transition: all 0.3s;
+    border: solid 0.5px #2e2e2e;
+    
+}
