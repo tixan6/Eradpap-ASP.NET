@@ -1,6 +1,9 @@
 ﻿body {
    
 }
+.errorTxt {
+    color: #ff3131;
+}
 .baground-input {
     background: #E7E7E7;
     width: 500px;

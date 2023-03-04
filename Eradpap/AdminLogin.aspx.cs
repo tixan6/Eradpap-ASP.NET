@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -34,11 +35,11 @@ namespace Eradpap
             if (result is NpgsqlDataReader)
             {
                 Error.Text = "Вы авторизовались";
+                Server.Transfer("admin.aspx", true);
             }
             else
             {
                 Error.Text = "Неправильный логин или пароль";
-                    bDConnection.ConnnectionClose();
             }
             bDConnection.ConnnectionClose();
              
