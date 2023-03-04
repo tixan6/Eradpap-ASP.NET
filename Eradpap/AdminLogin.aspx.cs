@@ -24,7 +24,7 @@ namespace Eradpap
 
         public void SetUpConnection(object sender, EventArgs e) 
         {
-            //Выучить нахой!!!
+         
 
             String connectionString = "Server=localhost;Port=5432;Username=postgres;Password=159753;Database=Eradpap;";
             NpgsqlConnection npgSqlConnection = new NpgsqlConnection(connectionString);
