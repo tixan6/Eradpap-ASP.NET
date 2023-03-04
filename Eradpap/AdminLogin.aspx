@@ -20,13 +20,12 @@
 
 
             <div class="baground-input">
-
+                <asp:Label Text="" ID="Error" runat="server" />
                 <div class="CenterItems">
                     <asp:TextBox runat="server" ID="LoginUser" placeholder="Логин" CssClass="input"/> <br />
-                    <asp:TextBox runat="server" ID="PasswordUser" placeholder="Пароль" CssClass="input"/> <br />
+                    <asp:TextBox runat="server" ID="PasswordUser" TextMode="Password" placeholder="Пароль" CssClass="input"/> <br />
 
                     <asp:Button Text="Войти" runat="server" CssClass="buttonSigin" OnClick="SetUpConnection"/>
-                    <asp:Label Text="text" ID="test" runat="server" />
                 </div>
                 
 
