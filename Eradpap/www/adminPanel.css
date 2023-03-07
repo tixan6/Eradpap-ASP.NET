@@ -1,0 +1,39 @@
+﻿body {
+    font-family: sans-serif;
+    color: #2e2e2e;
+}
+section {
+    width: 1000px;
+    margin: auto;
+}
+li a {
+    text-decoration:none;
+    color: #212121 ;
+}
+.active {
+    color:aquamarine;
+}
+
+select {
+    padding: 7px;
+}
+.save {
+    margin-top: 275px;
+    padding: 7px;
+    margin-left: 30px;
+}
+.mainMenu {
+    display: flex;
+    justify-content:space-between;
+}
+.categories 
+{
+    padding: 20px 0px 80px 0px;
+}
+.editPlace {
+    width: 800px;
+    height: 400px;
+
+    border: solid 0.3px #303030;
+    border-radius: 10px;
+}

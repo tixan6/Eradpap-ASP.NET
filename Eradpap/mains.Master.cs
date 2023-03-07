@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Eradpap
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class mains : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
