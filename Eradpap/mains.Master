@@ -14,46 +14,28 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
-
-
-
-
-
         <section>
-            <div class="logo">
-                <h1>Eradpap</h1>
-            </div>
 
-            
+        <div class="logo">
+            <h1 runat="server" ID="qwe">Eradpap</h1>
+        </div>
+       
         <div class="categories">
             <h3>Категории</h3>
-
-            <asp:DropDownList runat="server" CssClass="select">
-                <asp:ListItem Text="Все" Value="0"/>
-                <asp:ListItem Text="Кальяны" Value="1"/>
-                <asp:ListItem Text="Табак"  Value="2"/>
-                <asp:ListItem Text="Огниво" Value="3"/>
-                <asp:ListItem Text="Прочее" Value="4"/>
-            </asp:DropDownList>
-            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                
+            </asp:ContentPlaceHolder>       
         </div>
-        
+
         <div class="search"></div>
-
-
-
-
+            
 
         <div class="mainMenu">
-
             <div class="editPlace">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 
                 </asp:ContentPlaceHolder>
             </div>
-
-
 
             <div class="settings">
                 <div class="">

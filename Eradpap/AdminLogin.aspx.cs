@@ -41,7 +41,7 @@ namespace Eradpap
             NpgsqlDataReader npgSqlDataReader = npgSqlCommand.ExecuteReader();
             if (npgSqlDataReader.HasRows)
             {
-                Response.Redirect("admin.aspx");
+                Response.Redirect("Page/view.aspx");
             }
             else
             {
