@@ -17,7 +17,7 @@
         <section>
 
         <div class="logo">
-            <h1 runat="server" ID="qwe">Eradpap</h1>
+            <h1 runat="server">Eradpap</h1>
         </div>
        
         <div class="categories">
@@ -29,6 +29,11 @@
 
         <div class="search"></div>
             
+            <div class="messagePlace">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderError" runat="server">
+                
+                </asp:ContentPlaceHolder>
+            </div>
 
         <div class="mainMenu">
             <div class="editPlace">
