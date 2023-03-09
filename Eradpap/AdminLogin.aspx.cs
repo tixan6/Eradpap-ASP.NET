@@ -26,16 +26,28 @@ namespace Eradpap
 
         public void SetUpConnection(object sender, EventArgs e)
         {
-            
-            string login = LoginUser.Text;
-            string password = PasswordUser.Text;
-            BDConnection bDConnection = new BDConnection($"SELECT * FROM publics.\"dtAdmin\" WHERE \"dtAdmin\".pass = '{password}' and \"dtAdmin\".log = '{login}';");
-            bDConnection.ConnnectionOpen();
-            object result = bDConnection.RequestExecution();
-            if (result is NpgsqlDataReader)
+         
+
+            String connectionString = "Server=localhost;Port=5432;Username=postgres;Password=159753;Database=Eradpap;";
+            NpgsqlConnection npgSqlConnection = new NpgsqlConnection(connectionString);
+
+            npgSqlConnection.Open();
+ 
+            NpgsqlCommand npgSqlCommand = new NpgsqlCommand("SELECT * FROM publics.\"dtAdmin\";", npgSqlConnection);
+
+            NpgsqlDataReader npgSqlDataReader = npgSqlCommand.ExecuteReader();
+            if (npgSqlDataReader.HasRows)
             {
-                Error.Text = "Вы авторизовались";
-                Server.Transfer("admin.aspx", true);
+                while (npgSqlDataReader.Read()) // построчно считываем данные
+                {
+                    object pass = npgSqlDataReader.GetValue(0);
+                    object log = npgSqlDataReader.GetValue(1);
+
+
+                    test.Text = pass.ToString();
+                }
+
+
             }
             else
             {
