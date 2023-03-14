@@ -7,13 +7,48 @@ using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace Eradpap.Page
 {
     
     public partial class view : System.Web.UI.Page
     {
-      
+
+        protected void OnSelectedIndexChanged_gridViewFromView(object sender, EventArgs e) 
+        {
+            int id = (int)GridView1.SelectedDataKey.Values["id"];
+            if (removeRecord(id))
+            {
+                Response.Redirect(Request.Url.ToString());
+            }
+            else
+            {
+                ErrorMessage.InnerText = "Ошибка удаления";
+            }
+            
+        }
+
+        private bool removeRecord(int id) 
+        {
+            BDConnection bD = new BDConnection($"DELETE FROM publics.\"Product\" WHERE \"id\" = {id};");
+            try
+            {
+                bD.ConnnectionOpen();
+                bD.RequestExecution();
+                bD.ConnnectionClose();
+                
+
+                return true;
+
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            
+        }
         protected void SelectedList(object sender, EventArgs e)
         {
 

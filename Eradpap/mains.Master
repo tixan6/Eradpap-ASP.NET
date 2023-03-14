@@ -21,7 +21,7 @@
         </div>
        
         <div class="categories">
-            <h3>Категории</h3>
+            
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                 
             </asp:ContentPlaceHolder>       
@@ -31,7 +31,7 @@
             
             <div class="messagePlace">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderError" runat="server">
-                
+                    
                 </asp:ContentPlaceHolder>
             </div>
 
@@ -48,30 +48,45 @@
 
                     <asp:Menu runat="server" >
                         <Items>
-                            <asp:MenuItem Text="Просмотр" NavigateUrl="Page/view.aspx"></asp:MenuItem>
-                            <asp:MenuItem Text="Добавление" NavigateUrl="Page/view.aspx"></asp:MenuItem>
-                            <asp:MenuItem Text="Редактирование" NavigateUrl="Page/view.aspx"></asp:MenuItem>
-                            <asp:MenuItem Text="Удаление" NavigateUrl="Page/view.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Просмотр" NavigateUrl="Page/view.aspx"></asp:MenuItem> 
+                            <asp:MenuItem Text="Добавление" NavigateUrl="Page/addPanel.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Редактирование" NavigateUrl="Page/EditForm.aspx"></asp:MenuItem>
                         </Items>
                     </asp:Menu>
 
 
                 </div>
 
-                <div class="button">
-                    <div>
-                        <asp:Button ID="btnSaveChange"  CssClass="save" Text="Сохранить" runat="server" />
-                    </div>
-                    
-                </div>
+                <style>
+                    li {
+                        padding: 5px;
+                        transition: all 0.3s;
+                        
+                    }
+                    li a:hover {
+                        color: #ff4a4a;
+                        transition: all 0.3s;
+                    }
+                    .editPlace {
+                        overflow: auto;
+                    }
+                </style>
 
             </div>
         </div>
 
+            <div class="edit">
+                <h1>Данные для изменения</h1>
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                
+                </asp:ContentPlaceHolder>
+            </div>
+
         </section>
 
 
-            
+
 
 
     </form>

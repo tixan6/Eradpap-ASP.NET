@@ -51,12 +51,12 @@ namespace Eradpap
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
 
         /// <summary>
-        /// btnSaveChange элемент управления.
+        /// ContentPlaceHolder4 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveChange;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder4;
     }
 }

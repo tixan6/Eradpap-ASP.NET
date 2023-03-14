@@ -56,6 +56,7 @@
     <Reference Include="Npgsql, Version=7.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.7.0.2\lib\netstandard2.0\Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -115,6 +116,8 @@
   <ItemGroup>
     <Content Include="admin.aspx" />
     <Content Include="JQuery\jquery-3.6.3.min.js" />
+    <Content Include="Page\addPanel.aspx" />
+    <Content Include="Page\EditForm.aspx" />
     <Content Include="Page\view.aspx" />
     <Content Include="Web.config" />
     <Content Include="AdminLogin.aspx" />
@@ -136,6 +139,20 @@
     </Compile>
     <Compile Include="mains.Master.designer.cs">
       <DependentUpon>mains.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Page\addPanel.aspx.cs">
+      <DependentUpon>addPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\addPanel.aspx.designer.cs">
+      <DependentUpon>addPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\EditForm.aspx.cs">
+      <DependentUpon>EditForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\EditForm.aspx.designer.cs">
+      <DependentUpon>EditForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\view.aspx.cs">
       <DependentUpon>view.aspx</DependentUpon>
@@ -166,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
