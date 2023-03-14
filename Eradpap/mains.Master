@@ -76,7 +76,7 @@
         </div>
 
             <div class="edit">
-                <h1>Данные для изменения</h1>
+                
                 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
                 

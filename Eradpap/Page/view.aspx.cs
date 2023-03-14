@@ -37,8 +37,7 @@ namespace Eradpap.Page
                 bD.ConnnectionOpen();
                 bD.RequestExecution();
                 bD.ConnnectionClose();
-                
-
+               
                 return true;
 
             }
